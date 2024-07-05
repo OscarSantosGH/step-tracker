@@ -7,29 +7,61 @@
 
 import SwiftUI
 
+enum HealthMetricContext: CaseIterable, Identifiable {
+    case steps, weight
+    var id: Self { self }
+    
+    var title: String {
+        switch self {
+        case .steps:
+            "Steps"
+        case .weight:
+            "Weight"
+        }
+    }
+    
+    var tint: Color {
+        switch self {
+        case .steps:
+            Color.pink
+        case .weight:
+            Color.purple
+        }
+    }
+}
+
 struct ContentView: View {
+    @State private var selectedStat: HealthMetricContext = .steps
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    Picker("Selected Stat", selection: $selectedStat) {
+                        ForEach(HealthMetricContext.allCases){ metric in
+                            Text(metric.title)
+                        }
+                    }
+                    .pickerStyle(.segmented)
                     
                     VStack {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Label("Steps", systemImage: "figure.walk")
-                                    .font(.title3.bold())
-                                    .foregroundStyle(.pink)
+                        NavigationLink(value: selectedStat) {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Label("Steps", systemImage: "figure.walk")
+                                        .font(.title3.bold())
+                                        .foregroundStyle(.pink)
+                                    
+                                    Text("Avg: 10k Steps")
+                                        .font(.caption)
+                                }
                                 
-                                Text("Avg: 10k Steps")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                Spacer()
+                                
+                                Image(systemName: "chevron.right")
                             }
-                            
-                            Spacer()
-                            
-                            Image(systemName: "chevron.right")
-                                .foregroundStyle(.secondary)
                         }
+                        .foregroundStyle(.secondary)
                         .padding(.bottom, 12)
                         
                         RoundedRectangle(cornerRadius: 12)
@@ -61,7 +93,11 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("Dashboard")
+            .navigationDestination(for: HealthMetricContext.self) { metric in
+                Text(metric.title)
+            }
         }
+        .tint(selectedStat.tint)
     }
 }
 
