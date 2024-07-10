@@ -20,6 +20,7 @@
 		8301CE8A2C3F0FA400AE4045 /* ChartDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE892C3F0FA400AE4045 /* ChartDataTypes.swift */; };
 		8301CE8D2C3F106900AE4045 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE8C2C3F106900AE4045 /* Date+Ext.swift */; };
 		8301CE902C3F11C000AE4045 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 8301CE8F2C3F11C000AE4045 /* Algorithms */; };
+		8301CE922C3F1AEA00AE4045 /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE912C3F1AEA00AE4045 /* StepPieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8301CE872C3F0F8200AE4045 /* ChartMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMath.swift; sourceTree = "<group>"; };
 		8301CE892C3F0FA400AE4045 /* ChartDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataTypes.swift; sourceTree = "<group>"; };
 		8301CE8C2C3F106900AE4045 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		8301CE912C3F1AEA00AE4045 /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8301CE812C3F0B8200AE4045 /* StepBarChart.swift */,
+				8301CE912C3F1AEA00AE4045 /* StepPieChart.swift */,
 				8301CE872C3F0F8200AE4045 /* ChartMath.swift */,
 				8301CE892C3F0FA400AE4045 /* ChartDataTypes.swift */,
 			);
@@ -220,6 +223,7 @@
 				8301CE882C3F0F8200AE4045 /* ChartMath.swift in Sources */,
 				8301CE802C3E0DCE00AE4045 /* HealthMetric.swift in Sources */,
 				8301CE8A2C3F0FA400AE4045 /* ChartDataTypes.swift in Sources */,
+				8301CE922C3F1AEA00AE4045 /* StepPieChart.swift in Sources */,
 				8301CE8D2C3F106900AE4045 /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
