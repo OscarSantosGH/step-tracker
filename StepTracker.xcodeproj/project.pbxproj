@@ -23,6 +23,7 @@
 		8301CE922C3F1AEA00AE4045 /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE912C3F1AEA00AE4045 /* StepPieChart.swift */; };
 		8301CE942C3F563200AE4045 /* WeightLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE932C3F563200AE4045 /* WeightLineChart.swift */; };
 		8301CE972C3F57A500AE4045 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE962C3F57A500AE4045 /* MockData.swift */; };
+		8301CE992C45BF5B00AE4045 /* WeightDiffBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE982C45BF5B00AE4045 /* WeightDiffBarChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		8301CE912C3F1AEA00AE4045 /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 		8301CE932C3F563200AE4045 /* WeightLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLineChart.swift; sourceTree = "<group>"; };
 		8301CE962C3F57A500AE4045 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		8301CE982C45BF5B00AE4045 /* WeightDiffBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDiffBarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				8301CE812C3F0B8200AE4045 /* StepBarChart.swift */,
 				8301CE912C3F1AEA00AE4045 /* StepPieChart.swift */,
 				8301CE932C3F563200AE4045 /* WeightLineChart.swift */,
+				8301CE982C45BF5B00AE4045 /* WeightDiffBarChart.swift */,
 				8301CE872C3F0F8200AE4045 /* ChartMath.swift */,
 				8301CE892C3F0FA400AE4045 /* ChartDataTypes.swift */,
 			);
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8301CE7A2C3B57BF00AE4045 /* HealthDataListView.swift in Sources */,
+				8301CE992C45BF5B00AE4045 /* WeightDiffBarChart.swift in Sources */,
 				8301CE6D2C38993C00AE4045 /* DashboardView.swift in Sources */,
 				8301CE822C3F0B8200AE4045 /* StepBarChart.swift in Sources */,
 				8301CE972C3F57A500AE4045 /* MockData.swift in Sources */,
