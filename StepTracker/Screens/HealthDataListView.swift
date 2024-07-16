@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HealthDataListView: View {
     var metric: HealthMetricContext
+    
     @Environment(HealthKitManager.self) private var hkManager
     @State private var isShowingAddData = false
     @State private var addDataDate: Date = .now
@@ -56,14 +57,26 @@ struct HealthDataListView: View {
                     Button("Add Data") {
                         Task {
                             if metric == .steps {
-                                await hkManager.addStepData(for: addDataDate, value: Double(valueToAdd)!)
-                                await hkManager.fetchStepCount()
-                                isShowingAddData = false
+                                do {
+                                    try await hkManager.addStepData(for: addDataDate, value: Double(valueToAdd)!)
+                                    try await hkManager.fetchStepCount()
+                                    isShowingAddData = false
+                                } catch STError.sharingDenied(let quantityType) {
+                                    print("❌ sharing denied for \(quantityType)")
+                                } catch {
+                                    print("❌ Data List view Unable to complete request")
+                                }
                             } else {
-                                await hkManager.addWeightData(for: addDataDate, value: Double(valueToAdd)!)
-                                await hkManager.fetchWeights()
-                                await hkManager.fetchWeightsForDifferentials()
-                                isShowingAddData = false
+                                do {
+                                    try await hkManager.addWeightData(for: addDataDate, value: Double(valueToAdd)!)
+                                    try await hkManager.fetchWeights()
+                                    try await hkManager.fetchWeightsForDifferentials()
+                                    isShowingAddData = false
+                                } catch STError.sharingDenied(let quantityType) {
+                                    print("❌ sharing denied for \(quantityType)")
+                                } catch {
+                                    print("❌ Data List view Unable to complete request")
+                                }
                             }
                         }
                     }
