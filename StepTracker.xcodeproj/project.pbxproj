@@ -29,6 +29,7 @@
 		8301CE9F2C52E35E00AE4045 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE9E2C52E35E00AE4045 /* ChartHelper.swift */; };
 		8301CEA12C52E57F00AE4045 /* ChartAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CEA02C52E57F00AE4045 /* ChartAnnotationView.swift */; };
 		83A5E4CC2C53198F00CC0D14 /* STError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5E4CB2C53198F00CC0D14 /* STError.swift */; };
+		83A5E4CE2C541FB500CC0D14 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5E4CD2C541FB500CC0D14 /* Array+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		8301CE9E2C52E35E00AE4045 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		8301CEA02C52E57F00AE4045 /* ChartAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAnnotationView.swift; sourceTree = "<group>"; };
 		83A5E4CB2C53198F00CC0D14 /* STError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STError.swift; sourceTree = "<group>"; };
+		83A5E4CD2C541FB500CC0D14 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				8301CE8C2C3F106900AE4045 /* Date+Ext.swift */,
+				83A5E4CD2C541FB500CC0D14 /* Array+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				8301CE802C3E0DCE00AE4045 /* HealthMetric.swift in Sources */,
 				8301CE8A2C3F0FA400AE4045 /* ChartDataTypes.swift in Sources */,
 				8301CE922C3F1AEA00AE4045 /* StepPieChart.swift in Sources */,
+				83A5E4CE2C541FB500CC0D14 /* Array+Ext.swift in Sources */,
 				8301CE942C3F563200AE4045 /* WeightLineChart.swift in Sources */,
 				8301CE8D2C3F106900AE4045 /* Date+Ext.swift in Sources */,
 			);
