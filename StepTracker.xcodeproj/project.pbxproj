@@ -28,6 +28,7 @@
 		8301CE9D2C51A48300AE4045 /* ChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE9C2C51A48300AE4045 /* ChartContainer.swift */; };
 		8301CE9F2C52E35E00AE4045 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CE9E2C52E35E00AE4045 /* ChartHelper.swift */; };
 		8301CEA12C52E57F00AE4045 /* ChartAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CEA02C52E57F00AE4045 /* ChartAnnotationView.swift */; };
+		83A5E4CC2C53198F00CC0D14 /* STError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5E4CB2C53198F00CC0D14 /* STError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		8301CE9C2C51A48300AE4045 /* ChartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainer.swift; sourceTree = "<group>"; };
 		8301CE9E2C52E35E00AE4045 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		8301CEA02C52E57F00AE4045 /* ChartAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAnnotationView.swift; sourceTree = "<group>"; };
+		83A5E4CB2C53198F00CC0D14 /* STError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				8301CE8B2C3F105600AE4045 /* Extensions */,
 				8301CE962C3F57A500AE4045 /* MockData.swift */,
+				83A5E4CB2C53198F00CC0D14 /* STError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				8301CE972C3F57A500AE4045 /* MockData.swift in Sources */,
 				8301CE9B2C4F5CF700AE4045 /* ChartEmptyView.swift in Sources */,
 				8301CE6B2C38993C00AE4045 /* StepTrackerApp.swift in Sources */,
+				83A5E4CC2C53198F00CC0D14 /* STError.swift in Sources */,
 				8301CE7E2C3C5B7F00AE4045 /* HealthKitManager.swift in Sources */,
 				8301CE7C2C3B632200AE4045 /* HealthKitPermissionPrimingView.swift in Sources */,
 				8301CE9F2C52E35E00AE4045 /* ChartHelper.swift in Sources */,
