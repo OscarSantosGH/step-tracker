@@ -52,35 +52,21 @@ struct DashboardView: View {
                     switch selectedStat {
                     case .steps:
                         StepBarChart(chartData: ChartHelper.convert(data: hkManager.stepData))
-                        StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
+                        StepPieChart(chartData: ChartHelper.averageWeekdayCount(for: hkManager.stepData))
                     case .weight:
                         WeightLineChart(chartData: ChartHelper.convert(data: hkManager.weightData))
-                        WeightDiffBarChart(chartData: ChartMath.averageDailyWeightDiffs(for: hkManager.weightDiifData))
+                        WeightDiffBarChart(chartData: ChartHelper.averageDailyWeightDiffs(for: hkManager.weightDiffData))
                     }
                 }
             }
             .padding()
-            .task {
-                do {
-                    try await hkManager.fetchStepCount()
-                    try await hkManager.fetchWeights()
-                    try await hkManager.fetchWeightsForDifferentials()
-                } catch STError.authNotDetermine {
-                    isShowingPermissionPrimingSheet = true
-                } catch STError.noData {
-                    fetchError = .noData
-                    isShowingAlert = true
-                } catch {
-                    fetchError = .unableToCompleteRequest
-                    isShowingAlert = true
-                }
-            }
+            .task { fetchHealthData() }
             .navigationTitle("Dashboard")
             .navigationDestination(for: HealthMetricContext.self) { metric in
                 HealthDataListView(metric: metric)
             }
-            .sheet(isPresented: $isShowingPermissionPrimingSheet) {
-                //Fetch health data
+            .fullScreenCover(isPresented: $isShowingPermissionPrimingSheet) {
+                fetchHealthData()
             } content: {
                 HealthKitPermissionPrimingView()
             }
@@ -93,6 +79,28 @@ struct DashboardView: View {
 
         }
         .tint(selectedStat.tint)
+    }
+    
+    private func fetchHealthData() {
+        Task {
+            do {
+                async let steps = hkManager.fetchStepCount()
+                async let weightsForLineChart = hkManager.fetchWeights(daysBack: 28)
+                async let weightsForDiffBarChart = hkManager.fetchWeights(daysBack: 29)
+                
+                hkManager.stepData = try await steps
+                hkManager.weightData = try await weightsForLineChart
+                hkManager.weightDiffData = try await weightsForDiffBarChart
+            } catch STError.authNotDetermine {
+                isShowingPermissionPrimingSheet = true
+            } catch STError.noData {
+                fetchError = .noData
+                isShowingAlert = true
+            } catch {
+                fetchError = .unableToCompleteRequest
+                isShowingAlert = true
+            }
+        }
     }
     
 }
