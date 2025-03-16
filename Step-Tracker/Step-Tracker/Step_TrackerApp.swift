@@ -1,15 +1,14 @@
 //
-//  StepTrackerApp.swift
-//  StepTracker
+//  Step_TrackerApp.swift
+//  Step-Tracker
 //
-//  Created by Oscar Santos on 7/5/24.
+//  Created by Oscar Santos on 3/16/25.
 //
 
 import SwiftUI
 
 @main
-struct StepTrackerApp: App {
-    
+struct Step_TrackerApp: App {
     let hkData = HealthKitData()
     let hkManager = HealthKitManager()
     

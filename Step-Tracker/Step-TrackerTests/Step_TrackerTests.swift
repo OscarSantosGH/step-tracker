@@ -1,13 +1,13 @@
 //
-//  StepTrackerTests.swift
-//  StepTrackerTests
+//  Step_TrackerTests.swift
+//  Step-TrackerTests
 //
-//  Created by Oscar Santos on 3/11/25.
+//  Created by Oscar Santos on 3/16/25.
 //
 
 import Foundation
 import Testing
-@testable import StepTracker
+@testable import Step_Tracker
 
 struct StepTrackerTests {
 
@@ -36,4 +36,3 @@ struct ChartHelperTests {
         #expect(averageWeekdayCount[2].date.weekdayTitle == "Wednesday")
     }
 }
-
